@@ -7,6 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1PeQzt_eK8CiqdtGV8vYNcEMrm4o0ALjl
 """
 
+from google.colab import drive
+drive.mount("/content/gdrive")
 # !pip install sweetviz
 # import sweetviz as sv
 import datetime
@@ -492,6 +494,14 @@ def train(model, X_train, y_train, X_val, y_val, X_test, y_test, params):
         plt.title("Confusion Matrix", size = 15)
         plt.show()
 
+        importance = xgb.feature_importances_
+
+        for i in range(len(importance)):
+            print("Feature: {:d}, Score: {:.3f}".format(i,importance[i]))
+
+        plt.bar([x for x in range(len(importance))], importance)
+        plt.show()
+        
         return xgb
 
 
