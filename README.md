@@ -19,7 +19,7 @@ def preprocess(analysis = False):
 
 # Running on your own device
 
-- First, you will need to install the necessary modules mentioned below:
+- First, you will have to install the necessary modules mentioned below:
   1. datetime
   2. numpy
   3. pandas
