@@ -32,7 +32,6 @@ def preprocess(analysis = False):
 - Please download the datasets from the following [link](https://drive.google.com/drive/folders/1HRDxih_6xN0uU2Js3xGF8zp5r_XPSEJc?usp=sharing)
 - You will have to change the folder path in the preprocess method according to your datasets: [Jump to code](/Code.py)
 - The below portion is the snippet you will need to change.
-- An example would be Airlines = pd.read_csv('/Data/airlines.csv')
 ```
 def preprocess(analysis = False):
 
@@ -40,4 +39,8 @@ def preprocess(analysis = False):
     Airports = pd.read_csv('/content/gdrive/My Drive/ML_Project/airports.csv')
     Flights = pd.read_csv('/content/gdrive/My Drive/ML_Project/flights.csv')
 
+```
+- An example would be
+```
+Airlines = pd.read_csv('/Data/airlines.csv')
 ```
